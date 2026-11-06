@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Minimalist Solar Scrollbars & Utilities */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth transitions for cards & buttons */
+.solar-card {
+  @apply bg-white border border-slate-200/80 rounded-sm shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300;
+}
+
+.solar-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-sm text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200/60;
+}
+
+.solar-btn-primary {
+  @apply inline-flex items-center justify-center px-5 py-2.5 rounded-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 active:bg-slate-950 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+}
+
+.solar-btn-secondary {
+  @apply inline-flex items-center justify-center px-5 py-2.5 rounded-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.solar-btn-accent {
+  @apply inline-flex items-center justify-center px-5 py-2.5 rounded-sm font-semibold text-slate-950 bg-amber-500 hover:bg-amber-400 active:bg-amber-600 transition-colors duration-150 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
