@@ -3,14 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
   
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
-  ],
-
-  css: ['~/assets/css/main.css'],
-
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'Goodeybest Solar Enterprise | Premier Solar Energy Web Store',
       meta: [
@@ -26,4 +20,10 @@ export default defineNuxtConfig({
     }
   },
 
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss'
+  ],
+
+  css: ['~/assets/css/main.css'],
 })
